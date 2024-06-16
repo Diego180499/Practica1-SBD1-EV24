@@ -141,6 +141,8 @@ modo_pago  VARCHAR(20),
 tarjeta  INT,
 fecha_salida  DATE NOT NULL,
 fecha_regreso  DATE NOT NULL,
+FOREIGN KEY (id_boleto)
+REFERENCES boleto(id),
 FOREIGN KEY (pasaporte_cliente)
 REFERENCES cliente(numero_pasaporte)
 );
